@@ -141,8 +141,20 @@ class Ex
 
   w: (args...) =>
     @write(args...)
+  
+  W: (args...) =>
+    @write(args...)
 
   wq: (args...) =>
+    @write(args...).then => @quit()
+    
+  WQ: (args...) =>
+    @write(args...).then => @quit()
+  
+  Wq: (args...) =>
+    @write(args...).then => @quit()
+    
+  wQ: (args...) =>
     @write(args...).then => @quit()
 
   x: => @wq()
